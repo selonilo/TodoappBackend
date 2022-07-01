@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: BoardingPass
+  profiles:
+    active: ${SPRING_PROFILE:local}
+  datasource:
+    url: jdbc:postgresql://212.2.219.86:25432/sayim_ng
+    username: pgsayimdbu
+    password: JzuVw3uJoh9ycANRey
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    show-sql: false
+    hibernate:
+      jdbc.fetch_size: 40
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: ${SERVER_PORT:11080}
+
+app:
+  jwtSecret: wyZEWblplLZ2XzB27iNodoXz7JOPGHs8
+  jwtExpirationMs: 900000 # 15 minutes
+  jwtRefreshExpirationMs: 86400000 # 1 day
+  description: CMV BORUSAN Counting
+  version: 1.0
+
+  file:
+    path.base: ${FILE_PATH_BASE:/opt/mikro/instances/prod/modules/sayim/files/images}
+
