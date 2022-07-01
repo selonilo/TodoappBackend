@@ -4,10 +4,12 @@ spring:
   profiles:
     active: ${SPRING_PROFILE:local}
   datasource:
-    url: jdbc:postgresql://212.2.219.86:25432/sayim_ng
-    username: pgsayimdbu
-    password: JzuVw3uJoh9ycANRey
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
   jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
         format_sql: true
