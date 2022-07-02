@@ -21,7 +21,7 @@ public class TodoController extends BaseController{
         return todoService.getAll();
     }
 
-    @GetMapping(PUBLIC_GET_BY_USER_ID)
+    @GetMapping(PUBLIC_GET_BY_USER_ID + "/{id}")
     public List<TodoDto> getByUserId(@PathVariable Long id){
         List<TodoDto> todoDtos = todoService.getByUserId(id);
         return todoDtos;

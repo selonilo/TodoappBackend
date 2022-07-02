@@ -21,9 +21,6 @@ public class Todo extends ExtendedModel {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
-
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
