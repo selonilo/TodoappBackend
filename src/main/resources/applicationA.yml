@@ -1,10 +1,10 @@
 spring:
   application:
-    name: BoardingPass
+    name: TODO
   profiles:
     active: ${SPRING_PROFILE:local}
   datasource:
-    url: jdbc:h2:mem:mydb
+    url: jdbc:h2:mem:testdb
     username: sa
     password:
     driverClassName: org.h2.Driver
@@ -27,12 +27,10 @@ server:
   port: ${SERVER_PORT:11080}
 
 app:
-  jwtSecret: wyZEWblplLZ2XzB27iNodoXz7JOPGHs8
-  jwtExpirationMs: 900000 # 15 minutes
-  jwtRefreshExpirationMs: 86400000 # 1 day
-  description: CMV BORUSAN Counting
-  version: 1.0
+  #jwtSecret: wyZEWblplLZ2XzB27iNodoXz7JOPGHs8
+  #jwtExpirationMs: 900000 # 15 minutes
+  #jwtRefreshExpirationMs: 86400000 # 1 day
+  #description: TODO
+  #version: 1.0
 
-  file:
-    path.base: ${FILE_PATH_BASE:/opt/mikro/instances/prod/modules/sayim/files/images}
 

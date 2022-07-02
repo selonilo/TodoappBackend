@@ -8,20 +8,24 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "sub_location_detail")
-public class SubLocationDetail extends ExtendedModel {
+@Table(name = "todo")
+public class Todo extends ExtendedModel {
 
     @Column(name = "name")
     private String name;
 
+    @Column(name = "description")
+    private String description;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    private SubLocation subLocation;
+    private User user;
 
     @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime updatedAt;
@@ -29,10 +33,5 @@ public class SubLocationDetail extends ExtendedModel {
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
-    @Column(name = "create_user")
-    private String createUser;
-
-    @Column(name = "update_user")
-    private String updateUser;
 
 }

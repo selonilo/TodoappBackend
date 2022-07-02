@@ -20,14 +20,14 @@ public class ToDoApplication {
 	}
 
 	@Bean
-	public OpenAPI customOpenAPI(@Value("${app.description}") String description,
-								 @Value("${app.version}") String version){
+	public OpenAPI customOpenAPI(@Value("TODO") String description,
+								 @Value("1.0") String version){
 		return new OpenAPI()
 				.info(new Info()
-						.title("COUNTING")
+						.title("TODO")
 						.version(version)
 						.description(description)
-						.license(new License().name("CMV COUNTING API License 1.0")));
+						.license(new License().name("TODO")));
 	}
 
 	@Bean

@@ -4,14 +4,11 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class SubLocationDto {
+public class TodoDto {
 
     private Long id;
     private String name;
-    private String description;
-    private Long locationId;
+    private Long userId;
     private LocalDateTime updatedAt;
     private LocalDateTime createdAt;
-    private String createUser;
-    private String updateUser;
 }
