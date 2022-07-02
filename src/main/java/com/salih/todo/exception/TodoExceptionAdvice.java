@@ -11,19 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 
-public class BorusanExceptionAdvice {
+public class TodoExceptionAdvice {
 
     private final ExceptionUtil exceptionUtil;
 
     @Value("${spring.application.name}")
     private String applicationName;
 
-    public BorusanExceptionAdvice(final ExceptionUtil exceptionUtil) {
+    public TodoExceptionAdvice(final ExceptionUtil exceptionUtil) {
         this.exceptionUtil = exceptionUtil;
     }
 
-    @ExceptionHandler(BorusanException.class)
-    public ResponseEntity handleException(BorusanException exception, HttpServletRequest request) {
+    @ExceptionHandler(TodoException.class)
+    public ResponseEntity handleException(TodoException exception, HttpServletRequest request) {
         return new ResponseEntity<>(exceptionUtil.convert(exception, getLanguageFormRequestHeader(request), applicationName), exception.getHttpStatus());
     }
 

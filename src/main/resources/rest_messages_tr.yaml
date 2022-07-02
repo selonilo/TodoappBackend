@@ -10,37 +10,13 @@ messages:
     message: Kullanıcı Adı veya Şifre hatalı
     description: Kullanıcı Adı veya Şifre hatalı
     fields: username,password
-  1001:
-    message: '%s alanına sahip kullanıcı bulunamadı.'
-    description:  '%s alanına sahip kullanıcı bulunamadı.'
   1002:
     message: 'Bu email daha önce kullanıldı.'
     description:  'Bu email daha önce kullanıldı.'
-  1003:
-    message: '%s'
-    description: '%s'
-  1004:
-    message: 'Kampanyanın başlagıç tarihi gelmemiştir.'
-    description: 'Kampanyanın başlagıç tarihi gelmemiştir.'
-  1005:
-    message: 'Kampanyanın bitiş tarihi geçmiştir.'
-    description: 'Kampanyanın bitiş tarihi geçmiştir.'
-  1006:
-    message: 'Kampanyanın kazanılabileceği işletmeler arasında işletmeniz bulunmamaktır.'
-    description: 'Kampanyanın kazanılabileceği işletmeler arasında işletmeniz bulunmamaktır.'
-  1007:
-    message: 'Kampanyanın kullanılabileceği işletmeler arasında işletmeniz bulunmamaktır.'
-    description: 'Kampanyanın kullanılabileceği işletmeler arasında işletmeniz bulunmamaktır.'
-  423:
-    message: '%s Kayitli barcode'
-    description: '%s Kayitli barcode'
   425:
     message: Kullanıcı Adı veya Şifre hatalı
     description: Kullanıcı Adı veya Şifre hatalı
     fields: username,password
-  427:
-    message: Lutfen once lokasyon kaydediniz
-    description: Lutfen once lokasyon kaydediniz
   429:
-    message: Lutfen uygulamanın son surumunu guncelleyiniz!!!
-    description: Lutfen uygulamanın son surumunu guncelleyiniz!!!
+    message: Kullanıcı Bulunamadı!
+    description: Kullanıcı Bulunamadı!

@@ -1,5 +1,6 @@
 package com.salih.todo.service;
 
+import com.salih.todo.exception.KullaniciBulunamadiException;
 import com.salih.todo.model.dto.TodoDto;
 import com.salih.todo.model.entity.Todo;
 import com.salih.todo.model.entity.User;
@@ -40,7 +41,7 @@ public class TodoService {
             todo.setUser(user.get());
         }
         else {
-            throw new EntityNotFoundException();
+            throw new KullaniciBulunamadiException(todoDto.getName());
         }
         todoRepository.save(todo);
         return todoDto;

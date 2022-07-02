@@ -85,13 +85,13 @@ public class ExceptionUtil {
         return lang;
     }
 
-    public ErrorWrapperDto convert(BorusanException exception, String language, String applicationName) {
+    public ErrorWrapperDto convert(TodoException exception, String language, String applicationName) {
         ErrorWrapperDto dto = convert(exception, language);
         dto.setApplicationName(applicationName);
         return dto;
     }
 
-    public ErrorWrapperDto convert(BorusanException exception, String language) {
+    public ErrorWrapperDto convert(TodoException exception, String language) {
         ErrorWrapperDto errorWrapperDto = new ErrorWrapperDto();
         errorWrapperDto.setCode(exception.getCode());
         language = checkLanguage(language);

@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 @Setter
-public class BorusanException extends RuntimeException {
+public class TodoException extends RuntimeException {
 
     private Integer code;
     private String message;
@@ -15,7 +15,7 @@ public class BorusanException extends RuntimeException {
     private String[] placeHolders;
     private HttpStatus httpStatus;
 
-    public BorusanException(int code, String message, String description, String[] fields, String[] placeHolders, HttpStatus httpStatus) {
+    public TodoException(int code, String message, String description, String[] fields, String[] placeHolders, HttpStatus httpStatus) {
         super(message);
         this.code = code;
         this.message = message;
@@ -25,19 +25,19 @@ public class BorusanException extends RuntimeException {
         this.httpStatus = httpStatus;
     }
 
-    public BorusanException(int code, String[] fields, String[] placeHolders) {
+    public TodoException(int code, String[] fields, String[] placeHolders) {
         this(code, null, null, fields, placeHolders, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    public BorusanException(int code, String[] fields) {
+    public TodoException(int code, String[] fields) {
         this(code, null, null, fields, null, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    public BorusanException(int code) {
+    public TodoException(int code) {
         this(code, null, null, null, null, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    public BorusanException(int code, HttpStatus httpStatus) {
+    public TodoException(int code, HttpStatus httpStatus) {
         this(code, null, null, null, null, httpStatus);
     }
 
